@@ -137,6 +137,11 @@ header .header-img {
   width: 100%;
 }
 
+header .intro-bg-img-left,
+header .intro-bg-img-right {
+  display: none;
+}
+
 .headings {
   background: url("./images/bg-pattern-intro-right-mobile.svg") 100% 220%
       no-repeat,
@@ -324,7 +329,8 @@ nav.footer-nav .nav-link:hover {
 }
 
 /* *****Media queries***** */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
+  /* ***nav*** */
   nav.main-nav {
     padding: 1rem 10%;
   }
@@ -373,5 +379,60 @@ nav.footer-nav .nav-link:hover {
 
   .hamburger-icon {
     display: none;
+  }
+
+  header .header-img {
+    height: auto;
+    width: 30%;
+    position: absolute;
+    top: 8rem;
+    right: 10%;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ***headings*** */
+  .headings {
+    background: var(--dark-violet);
+    color: #fff;
+    padding: 6rem 10%;
+    position: relative;
+    text-align: left;
+  }
+
+  .heading,
+  .subheading {
+    width: 50%;
+  }
+
+  .headings h1.heading {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    padding-bottom: 1.5rem;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding-bottom: 2.5rem;
+  }
+
+  header .intro-bg-img-left,
+  header .intro-bg-img-right {
+    display: block;
+    position: absolute;
+  }
+
+  header .intro-bg-img-left {
+    bottom: -60%;
+    left: 0;
+    width: 12%;
+  }
+
+  header .intro-bg-img-right {
+    right: 0;
+    top: 0;
+    width: 22%;
+    z-index: 2;
   }
 }
