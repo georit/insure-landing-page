@@ -13,6 +13,12 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Insure landing page</title>
   </head>
@@ -20,13 +26,13 @@
     <header>
       <nav class="main-nav">
         <img src="./images/logo.svg" alt="Logo" class="logo" />
-        <ul class="nav-links">
-          <li class="nav-link"><a href="#">how we work</a></li>
-          <li class="nav-link"><a href="#">blog</a></li>
-          <li class="nav-link"><a href="#">account</a></li>
-          <li class="nav-link"><a href="#">view plans</a></li>
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-link"><a href="#" class="our-work">how we work</a></li>
+          <li class="nav-link blog"><a href="#" class="blog">blog</a></li>
+          <li class="nav-link"><a href="#" class="account">account</a></li>
+          <li class="nav-link"><a href="#" class="plans">view plans</a></li>
         </ul>
-        <img src="./images/icon-hamburger.svg" class="hamburger-icon" />
+        <i class="fas fa-bars hamburger-icon" id="hamburger-icon"></i>
       </nav>
       <img
         src="./images/image-intro-mobile.jpg"
@@ -100,26 +106,10 @@
       <div class="social-media">
         <img src="./images/logo.svg" alt="logo" class="logo" />
         <div class="social-media-links">
-          <img
-            src="./images/icon-facebook.svg"
-            alt="icon"
-            class="social-media-link fb"
-          />
-          <img
-            src="./images/icon-twitter.svg"
-            alt="icon"
-            class="social-media-link tw"
-          />
-          <img
-            src="./images/icon-pinterest.svg"
-            alt="icon"
-            class="social-media-link pinterest"
-          />
-          <img
-            src="./images/icon-instagram.svg"
-            alt="icon"
-            class="social-media-link insta"
-          />
+          <i class="fab fa-facebook-square social-media-link"></i>
+          <i class="fab fa-twitter-square social-media-link"></i>
+          <i class="fab fa-pinterest-square social-media-link"></i>
+          <i class="fab fa-instagram social-media-link"></i>
         </div>
       </div>
       <hr />
@@ -152,5 +142,7 @@
         </div>
       </nav>
     </footer>
+    <!-- *****Scripts***** -->
+    <script src="script.js"></script>
   </body>
 </html>
