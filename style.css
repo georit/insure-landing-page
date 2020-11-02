@@ -23,6 +23,7 @@
 
 body {
   background-color: #fff;
+  color: var(--very-dark-violet);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   font-family: var(--body-font-family);
   font-weight: 400;
@@ -167,7 +168,6 @@ header .intro-bg-img-right {
 
 /* *****Main***** */
 main {
-  /*background: url("./images/bg-pattern-intro-right-mobile.svg") 100% -10% no-repeat;*/
   display: flex;
   flex-direction: column;
   padding-bottom: 10rem;
@@ -191,7 +191,7 @@ main {
 .features-section-heading::before {
   content: "";
   height: 1px;
-  background-color: var(--dark-grayish-violet);
+  background-color: var(--dark-violet);
   width: 40%;
   position: absolute;
   top: 0;
@@ -329,7 +329,7 @@ nav.footer-nav .nav-link:hover {
 }
 
 /* *****Media queries***** */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1155px) {
   /* ***nav*** */
   nav.main-nav {
     padding: 1rem 10%;
@@ -406,9 +406,18 @@ nav.footer-nav .nav-link:hover {
   }
 
   .headings h1.heading {
-    font-size: 2.8rem;
-    line-height: 1.1;
-    padding-bottom: 1.5rem;
+    padding: 2rem 0 1.5rem;
+    position: relative;
+  }
+
+  .headings h1.heading:before {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    width: 144px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .subheading {
@@ -434,5 +443,53 @@ nav.footer-nav .nav-link:hover {
     top: 0;
     width: 22%;
     z-index: 2;
+  }
+
+  /* ***features****/
+  .features {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 15rem 10% 6rem;
+    text-align: left;
+  }
+
+  .features-section-heading {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    padding: 2rem 0 2.5rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .features-section-heading::before {
+    width: 144px;
+    left: 0;
+    right: 100%;
+    transform: translateX(0%);
+  }
+
+  .feature {
+    width: 32%;
+  }
+
+  /* ***how we work*** */
+  .how-we-work {
+    background: url("./images/bg-pattern-how-we-work-desktop.svg") center right
+        no-repeat,
+      var(--dark-violet);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 3rem 5%;
+    text-align: left;
+    width: 80%;
+  }
+
+  .how-we-work .heading {
+    width: 40%;
+    padding: 0;
   }
 }
