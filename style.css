@@ -26,7 +26,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   font-family: var(--body-font-family);
   font-weight: 400;
-  width: 375px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -81,8 +81,7 @@ ul.nav-links {
   list-style-type: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  left: -100%;
   text-align: center;
   width: 100%;
   background: url("./images/bg-pattern-mobile-nav.svg") bottom center no-repeat,
@@ -129,6 +128,7 @@ ul.nav-links .plans:active {
 
 ul.nav-links.active {
   display: block;
+  transform: translateX(100%);
 }
 
 header .header-img {
@@ -162,7 +162,7 @@ header .header-img {
 
 /* *****Main***** */
 main {
-  background: url("./images/bg-pattern-intro-right-mobile.svg") 100% -10% no-repeat;
+  /*background: url("./images/bg-pattern-intro-right-mobile.svg") 100% -10% no-repeat;*/
   display: flex;
   flex-direction: column;
   padding-bottom: 10rem;
@@ -187,11 +187,11 @@ main {
   content: "";
   height: 1px;
   background-color: var(--dark-grayish-violet);
-  width: 50%;
+  width: 40%;
   position: absolute;
   top: 0;
-  right: 0;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .feature {
@@ -321,4 +321,57 @@ nav.footer-nav .nav-link {
 
 nav.footer-nav .nav-link:hover {
   border-bottom: 1px solid var(--very-dark-violet);
+}
+
+/* *****Media queries***** */
+@media screen and (min-width: 900px) {
+  nav.main-nav {
+    padding: 1rem 10%;
+  }
+  ul.nav-links {
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+    min-height: unset;
+    width: 50%;
+  }
+
+  ul.nav-links li {
+    padding: 0;
+  }
+
+  ul.nav-links li:first-child {
+    padding-top: 0;
+  }
+
+  ul.nav-links li a {
+    color: var(--dark-grayish-violet);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  ul.nav-links li a:not(.plans):hover {
+    color: var(--very-dark-violet);
+    transition: all 0.2s;
+  }
+
+  ul.nav-links .plans {
+    border: 2px solid var(--very-dark-violet);
+    color: var(--very-dark-violet);
+    padding: 0.3rem 1rem;
+  }
+
+  ul.nav-links .plans:hover {
+    color: #fff;
+    background-color: var(--very-dark-violet);
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
 }
