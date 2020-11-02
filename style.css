@@ -294,6 +294,7 @@ footer nav.footer-nav {
   align-items: center;
   margin: 0 0 4rem;
   text-align: center;
+  width: 100%;
 }
 
 footer nav.footer-nav .footer-nav-item {
@@ -329,7 +330,60 @@ nav.footer-nav .nav-link:hover {
 }
 
 /* *****Media queries***** */
-@media screen and (min-width: 1155px) {
+@media screen and (min-width: 768px) {
+  /* ***nav*** */
+  nav.main-nav {
+    padding: 1rem 10%;
+  }
+  ul.nav-links {
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+    min-height: unset;
+    width: 50%;
+  }
+
+  ul.nav-links li {
+    padding: 0;
+  }
+
+  ul.nav-links li:first-child {
+    padding-top: 0;
+  }
+
+  ul.nav-links li a {
+    color: var(--dark-grayish-violet);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  ul.nav-links li a:not(.plans):hover {
+    color: var(--very-dark-violet);
+    transition: all 0.2s;
+  }
+
+  ul.nav-links .plans {
+    border: 2px solid var(--very-dark-violet);
+    color: var(--very-dark-violet);
+    padding: 0.3rem 1rem;
+  }
+
+  ul.nav-links .plans:hover {
+    color: #fff;
+    background-color: var(--very-dark-violet);
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
   /* ***nav*** */
   nav.main-nav {
     padding: 1rem 10%;
@@ -491,5 +545,47 @@ nav.footer-nav .nav-link:hover {
   .how-we-work .heading {
     width: 40%;
     padding: 0;
+  }
+
+  /* *****footer***** */
+  footer {
+    background: url("./images/bg-pattern-footer-desktop.svg") top left no-repeat,
+      var(--very-light-gray);
+  }
+
+  footer .social-media {
+    background: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10% 1rem;
+    width: 100%;
+  }
+
+  footer .social-media .logo {
+    padding-bottom: 0;
+  }
+
+  footer .social-media .social-media-links {
+    justify-content: flex-end;
+  }
+
+  footer hr {
+    width: 80%;
+  }
+
+  footer nav.footer-nav {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 4rem;
+    padding: 0 10%;
+    text-align: center;
+  }
+
+  footer nav.footer-nav .footer-nav-item {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 10% 0 0;
   }
 }
