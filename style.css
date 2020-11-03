@@ -63,18 +63,22 @@ a.btn-transparent:hover {
 header {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100%;
 }
 
 nav.main-nav {
   background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 3;
 }
 
 ul.nav-links {
@@ -135,6 +139,7 @@ ul.nav-links.active {
 header .header-img {
   background-color: var(--dark-violet);
   height: auto;
+  margin-top: 50px;
   width: 100%;
 }
 
@@ -329,7 +334,8 @@ nav.footer-nav .nav-link:hover {
   border-bottom: 1px solid var(--very-dark-violet);
 }
 
-/* *****Media queries***** */
+/*  *****Media queries***** */
+/* ***tablets*** */
 @media screen and (min-width: 768px) {
   /* ***nav*** */
   nav.main-nav {
@@ -439,7 +445,7 @@ nav.footer-nav .nav-link:hover {
     height: auto;
     width: 30%;
     position: absolute;
-    top: 8rem;
+    top: 4.1rem;
     right: 10%;
     z-index: 1;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -449,7 +455,7 @@ nav.footer-nav .nav-link:hover {
   .headings {
     background: var(--dark-violet);
     color: #fff;
-    padding: 6rem 10%;
+    padding: 8rem 10%;
     position: relative;
     text-align: left;
   }
@@ -495,7 +501,7 @@ nav.footer-nav .nav-link:hover {
   header .intro-bg-img-right {
     right: 0;
     top: 0;
-    width: 22%;
+    width: 25%;
     z-index: 2;
   }
 
