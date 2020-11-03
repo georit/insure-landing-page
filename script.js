@@ -23,3 +23,16 @@ hamburgerMenu.addEventListener("click", () => {
     hideMobileMenu();
   }
 });
+
+mobileNav.addEventListener("click", (e) => {
+  let clickedEl = e.target.id;
+  if (
+    clickedEl === "our-work" ||
+    clickedEl === "blog" ||
+    clickedEl === "account" ||
+    clickedEl === "plans"
+  ) {
+    console.log(clickedEl);
+    hideMobileMenu();
+  }
+});
